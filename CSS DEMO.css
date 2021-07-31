@@ -1,0 +1,26 @@
+*{
+    color:green;
+}
+li{
+    color:blue;
+}
+#special{
+    color:pink;
+}
+.red{
+    width:100px;
+    height:100px;
+    background:yellow;
+    padding:20px;
+    margin:20px;
+    border: 2px dashed red;
+}
+button:hover{
+    color:red;
+    background:beige;
+}
+a[href^="naver"]{
+    color:purple;
+}
+
+/*  ^ 시작하는것 // $ 끝나는것*/
