@@ -1,0 +1,25 @@
+div,span{
+    width:80px;
+    height:80px;
+    margin:20px;
+}
+div{
+    background:red;
+    display:inline-block;
+}
+.container{
+    background:yellow;
+    left:20px;
+    top:20px;
+    position: relative;
+}
+.box{
+    background: blue;
+    left:20px;
+    top:20px;
+    position: sticky;
+}
+span{
+    background:blue;
+    display: block;
+}
