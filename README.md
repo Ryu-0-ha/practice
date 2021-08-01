@@ -36,6 +36,6 @@ flex-basis :공간을 얼마나 찾이하는지 자세히 알려주는것
 align-self:item 하나만 위치 조정
 
 
-#
+###
 1.flexbox 는 container,item을 꾸며주는 속성값 있음
 2.중심,반대 축이 있음
