@@ -15,7 +15,8 @@ material Design - 색 조합 사이트
 
 Row:가로
 column:세로
-
+----------
+CONTAINER
 justify-content :중심축에서 배치하는 것
 ex) center,flex-start,flex-end, space-around,space-between
 
@@ -23,5 +24,18 @@ align-items :반대축에서 아이템들을 어떻게 할 것 인지
 ex) baseline
 
 align-content :반대축에서 배치하는 것
+ex)justify-content랑 비슷함
 
 CSS-TRICKS
+-----------
+ITEM
+order :잘 안씀 순서 바꾸는거
+flex-grow :늘어나는 정도
+flex-shrink :줄어드는 정도 
+flex-basis :공간을 얼마나 찾이하는지 자세히 알려주는것
+align-self:item 하나만 위치 조정
+
+
+#
+1.flexbox 는 container,item을 꾸며주는 속성값 있음
+2.중심,반대 축이 있음
