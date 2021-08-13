@@ -3,19 +3,19 @@ const toDoList = document.querySelector("#todo-list");
 const toDoInput = document.querySelector("#todo-form input");
 
 let toDos=[]
-const TODOS_KEY="toDos"
+const TODOS_KEY="todos"
 
 function handleToDoSubmit(event){
     event.preventDefault();
-    const newToDo = toDoInput.value;
+    const newTodo = toDoInput.value;
     toDoInput.value="";
-    const newToDoObj={
-        text:newToDo,
+    const newTodoObj={
+        text:newTodo,
         id:Date.now(),
     }
-    toDos.push(newToDoObj);
-    saveToDo(toDos);
-    paintToDo(newToDoObj);
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
+    saveToDo();
 }
 
 function paintToDo(newToDo){
@@ -34,11 +34,11 @@ function paintToDo(newToDo){
 function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
-    toDos = toDos.filter((toDo)=> toDo.id !== parseInt(li.id));
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDo();
 }
 
-function saveToDo(toDos){
+function saveToDo(){
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
 }
 
@@ -48,7 +48,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
-    parsedToDos.forEach(paintToDo);//이해 x
+    parsedToDos.forEach(paintToDo);
 }
 /*  parsedToDos.forEach((item)=> console.log(item));
     ===
